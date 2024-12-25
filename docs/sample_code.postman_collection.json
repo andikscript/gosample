@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "29f4a46f-4cf5-49b6-a8a1-e342b537a4f5",
+		"name": "Sample Code",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39730987"
+	},
+	"item": [
+		{
+			"name": "Main Handler",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"andik\",\r\n    \"age\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8811/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "andik",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Handler",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/get?id=123&name=andik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123"
+						},
+						{
+							"key": "name",
+							"value": "andik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Handler",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1234\",\r\n    \"name\": \"andik\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8811/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "andik",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Handler",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/put?id=123&name=andik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"put"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123"
+						},
+						{
+							"key": "name",
+							"value": "andik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Handler",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/patch?id=123&name=andik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"patch"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123"
+						},
+						{
+							"key": "name",
+							"value": "andik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Handler",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/delete?id=123&name=andik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123"
+						},
+						{
+							"key": "name",
+							"value": "andik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Head Handler",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/head?id=123&name=andik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"head"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123"
+						},
+						{
+							"key": "name",
+							"value": "andik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Options Handler",
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/options?id=123&name=andik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"options"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123"
+						},
+						{
+							"key": "name",
+							"value": "andik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Canceled Handler",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/requestcanceled?id=123&name=andik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"requestcanceled"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123"
+						},
+						{
+							"key": "name",
+							"value": "andik"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

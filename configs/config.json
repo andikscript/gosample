@@ -1,0 +1,15 @@
+{
+  "server": {
+    "port": 8811,
+    "read_timeout": 10,
+    "write_timeout": 10
+  },
+  "database": {
+    "host": "localhost",
+    "port": "5432",
+    "username": "postgres",
+    "password": "90a8377de2d188408207ea5d3e19a5fd",
+    "dbname": "samplecode",
+    "schema": "public"
+  }
+}
