@@ -29,10 +29,30 @@ func init() { // initial config
 	}
 }
 
+func init() {
+	if model.AuthBasic != nil {
+		return
+	}
+
+	basePath, err := os.ReadFile(filepath.Join("configs", "basicauth.json"))
+	if err != nil {
+		util.LogError(fmt.Sprintf("Error when read basicauth.json or '%v'", err))
+	}
+
+	err = json.Unmarshal(basePath, &model.AuthBasic)
+	if err != nil {
+		util.LogError(fmt.Sprintf("Error when decode basicauth.json or '%v'", err))
+	}
+}
+
 func main() {
 	router := &service.Middleware{}
 	app.RouterHandler(router)
 
+	// register http basic auth
+	router.RegisterMiddleware(service.AuthBasic)
+
+	// get config
 	shared := model.GetConfig()
 
 	address := fmt.Sprintf(":%d", shared.Server.Port)

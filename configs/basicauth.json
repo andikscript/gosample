@@ -1,0 +1,6 @@
+{
+  "basicauth": {
+    "username": "user",
+    "password": "secret"
+  }
+}
