@@ -43,7 +43,7 @@ func main() {
 		WriteTimeout: time.Duration(shared.Server.WriteTimeout) * time.Second,
 	}
 
-	util.LogDebug(fmt.Sprintf("Listening and serving HTTP on %s", address))
+	util.LogDebug(fmt.Sprintf("⇨ Listening and serving HTTP on %s", address))
 	util.LogDebug(fmt.Sprintf("Read Timeout : %s", server.ReadTimeout))
 	util.LogDebug(fmt.Sprintf("Write Timeout : %s", server.WriteTimeout))
 
