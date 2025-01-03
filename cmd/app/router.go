@@ -32,4 +32,7 @@ func RouterHandler(router *service.Middleware) {
 
 	// if user access, so all request give cookie
 	router.HandleFunc("/cookie", cookieHandler)
+
+	// download file
+	router.HandleFunc("/download", downloadHandler)
 }
