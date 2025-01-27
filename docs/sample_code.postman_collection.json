@@ -8,13 +8,7 @@
 	"item": [
 		{
 			"name": "Main Handler",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "GET",
 				"header": [
 					{
@@ -24,15 +18,6 @@
 						"disabled": true
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"andik\",\r\n    \"age\": 23\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "http://localhost:8811/",
 					"protocol": "http",
@@ -57,7 +42,64 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Main Handler",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8811/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "andik",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:18:21 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "84"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"welcome to samplecode\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Get Handler",
@@ -86,7 +128,116 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get Handler",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8811/get?id=123&name=andik",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								},
+								{
+									"key": "name",
+									"value": "andik"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:18:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"get from samplecode\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Path Param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/pathparam/andik/mindai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"pathparam",
+						"andik",
+						"mindai"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Handler Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8811/pathparam/andik/mindai",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"pathparam",
+								"andik",
+								"mindai"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:19:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"body\": \"id: andik, name: mindai\",\n        \"message\": \"path param from samplecode\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Post Handler",
@@ -126,7 +277,141 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Post Handler",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1234\",\r\n    \"name\": \"andik\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8811/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "andik",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:19:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"post from samplecode\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Post Handler Json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1234\",\r\n    \"name\": \"andik\",\r\n    \"address\": \"surakarta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8811/postjson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"postjson"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post Handler Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1234\",\r\n    \"name\": \"andik\",\r\n    \"address\": \"surakarta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8811/postjson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"postjson"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:18:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"post from gosamplecode\",\n        \"response\": \"1234andiksurakarta\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Put Handler",
@@ -155,7 +440,55 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Put Handler",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8811/put?id=123&name=andik",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"put"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								},
+								{
+									"key": "name",
+									"value": "andik"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:19:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"put from samplecode\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Patch Handler",
@@ -184,7 +517,55 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Patch Handler",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8811/patch?id=123&name=andik",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"patch"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								},
+								{
+									"key": "name",
+									"value": "andik"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:20:02 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "84"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"patch from samplecode\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Delete Handler",
@@ -213,7 +594,55 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Delete Handler",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8811/delete?id=123&name=andik",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								},
+								{
+									"key": "name",
+									"value": "andik"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:20:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"delete from samplecode\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Head Handler",
@@ -271,7 +700,55 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Options Handler",
+					"originalRequest": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8811/options?id=123&name=andik",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"options"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								},
+								{
+									"key": "name",
+									"value": "andik"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:20:19 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"options from samplecode\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Request Canceled Handler",
@@ -296,6 +773,164 @@
 						{
 							"key": "name",
 							"value": "andik"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Request Canceled Handler",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8811/requestcanceled?id=123&name=andik",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"requestcanceled"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								},
+								{
+									"key": "name",
+									"value": "andik"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:20:32 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"request canceled to samplecode\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Cookie Handler",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8811/cookie?cookie=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"cookie"
+					],
+					"query": [
+						{
+							"key": "cookie",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cookie Handler",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8811/cookie?cookie=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8811",
+							"path": [
+								"cookie"
+							],
+							"query": [
+								{
+									"key": "cookie",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "CookieData=Fg3llc2Ns74db8hwY8CGTu5n97uDfKfk1u4AJyPsq5MdFmiDezaqxuEA8oJKROv6; Expires=Mon, 27 Jan 2025 03:30:43 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 03:20:43 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "169"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"cookie\": \"Fg3llc2Ns74db8hwY8CGTu5n97uDfKfk1u4AJyPsq5MdFmiDezaqxuEA8oJKROv6\",\n        \"message\": \"cookie handler from samplecode\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Download Handler",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8811/download?fileName=1-go.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8811",
+					"path": [
+						"download"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "1-go.png"
 						}
 					]
 				}

@@ -35,7 +35,7 @@ func postHandlerJson(w http.ResponseWriter, r *http.Request) {
 
 		if initial {
 			body = M{
-				"message":  "post from gorestsocket",
+				"message":  "post from gosamplecode",
 				"response": request,
 			}
 
