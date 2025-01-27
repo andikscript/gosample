@@ -18,6 +18,8 @@ func RouterHandler(router *service.Middleware) {
 
 	router.HandleFunc("/post", postHandler)
 
+	router.HandleFunc("/postjson", postHandlerJson)
+
 	router.HandleFunc("/put", putHandler)
 
 	router.HandleFunc("/patch", patchHandler)
